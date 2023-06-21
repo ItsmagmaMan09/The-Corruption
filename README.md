@@ -1,4 +1,4 @@
-# The-Corruption
+# The Corruption
 The Corruption is a mod that adds 1 block that will spread through your world slowly (only when the chunks are loaded) The Corruption block is unbreakable you don't want to end up on it because it slows you down, restricts your jump, and damages you quickly!
 
 -To start the spread of the corruption enter the command /function corruption:start
