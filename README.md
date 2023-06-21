@@ -7,3 +7,11 @@ Available on CurseForge And Modrinth!
 
 <a href="https://modrinth.com/mod/the-corruption"><img src="https://raw.githubusercontent.com/Prospector/badges/master/modrinth-badge-72h-padded.png"></a>
 <a href="https://www.curseforge.com/minecraft/mc-mods/the-corruption-block/files"><img src="https://i.ibb.co/K9HSKr3/Curse-Forge-badge-72h-padded.png" alt="Curse-Forge-badge-72h-padded" border="0"></a>
+
+
+Or Download From
+<a href="https://github.com/ItsmagmaMan09/The-Corruption/releases">GitHub</a>
+
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=K5NnhG2O0eo" target="_blank">
+ <img src="http://img.youtube.com/vi/K5NnhG2O0eo/mqdefault.jpg" alt="Watch the video" width="480" height="270" border="10" />
+</a>
