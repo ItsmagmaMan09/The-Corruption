@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "corruption:block/corruption",
+    "up": "corruption:block/corruption",
+    "north": "corruption:block/corruption",
+    "east": "corruption:block/corruption",
+    "south": "corruption:block/corruption",
+    "west": "corruption:block/corruption",
+    "particle": "corruption:block/corruption"
+  },
+  "render_type": "solid"
+}

@@ -1,0 +1,23 @@
+{
+  "display": {
+    "background": "minecraft:textures/block/stone.png",
+    "icon": {
+      "item": "corruption:corruption"
+    },
+    "title": {
+      "translate": "advancements.corrupted.title"
+    },
+    "description": {
+      "translate": "advancements.corrupted.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "corrupted": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

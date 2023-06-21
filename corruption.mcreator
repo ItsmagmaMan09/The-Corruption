@@ -1,0 +1,178 @@
+{
+  "mod_elements": [
+    {
+      "name": "CorruptionSpread",
+      "type": "procedure",
+      "sortid": 6,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "corruption_spread",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/thecorruption/procedures/CorruptionSpreadProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Corruption",
+      "type": "block",
+      "sortid": 2,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "corruption",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/corruption/models/item/corruption.json",
+          "src/main/resources/assets/corruption/blockstates/corruption.json",
+          "src/main/resources/assets/corruption/models/block/corruption.json",
+          "src/main/java/net/mcreator/thecorruption/block/CorruptionBlock.java"
+        ]
+      }
+    },
+    {
+      "name": "Dirt",
+      "type": "tag",
+      "sortid": 4,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dirt",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/minecraft/tags/blocks/dirt.json"
+        ]
+      }
+    },
+    {
+      "name": "Log",
+      "type": "tag",
+      "sortid": 3,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "log",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/minecraft/tags/blocks/log.json"
+        ]
+      }
+    },
+    {
+      "name": "CorruptionEntityWalksOnTheBlock",
+      "type": "procedure",
+      "sortid": 5,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "corruption_entity_walks_on_the_block",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/thecorruption/procedures/CorruptionEntityWalksOnTheBlockProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Corrupted",
+      "type": "achievement",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "corrupted",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/corruption/advancements/corrupted.json"
+        ]
+      }
+    },
+    {
+      "name": "Startp",
+      "type": "procedure",
+      "sortid": 7,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "startp",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/thecorruption/procedures/StartpProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Start",
+      "type": "function",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "start",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/corruption/functions/start.mcfunction"
+        ]
+      }
+    }
+  ],
+  "variable_elements": [],
+  "sound_elements": [],
+  "language_map": {
+    "en_us": {
+      "advancements.corrupted.title": "Corrupted?",
+      "block.the_corruption.corruption": "Corruption",
+      "block.corruption.corruption": "Corruption",
+      "advancements.corrupted.descr": "What is this, corruption; it seems to weaken me!"
+    }
+  },
+  "foldersRoot": {
+    "name": "~",
+    "children": []
+  },
+  "workspaceSettings": {
+    "modid": "corruption",
+    "modName": "The Corruption",
+    "version": "1.0.0",
+    "description": "A mod that adds a block to start corupting your world",
+    "author": "ItsMagmaMan",
+    "websiteURL": "https://www.youtube.com/channel/UCB_JHhmO5BL8_5CP_2Lx6ZQ",
+    "license": "All Rights Reserved",
+    "disableForgeVersionCheck": true,
+    "serverSideOnly": false,
+    "modPicture": "untitled-1",
+    "requiredMods": [],
+    "dependencies": [],
+    "dependants": [],
+    "mcreatorDependencies": [],
+    "currentGenerator": "fabric-1.20.1",
+    "credits": "Made Via MCreator",
+    "modElementsPackage": "net.mcreator.thecorruption",
+    "lockBaseModFiles": false
+  },
+  "mcreatorVersion": 202300224119
+}
