@@ -138,6 +138,127 @@
           "src/main/resources/data/corruption/functions/start.mcfunction"
         ]
       }
+    },
+    {
+      "name": "Test",
+      "type": "potioneffect",
+      "sortid": 14,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "test",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/thecorruption/potion/TestMobEffect.java"
+        ]
+      }
+    },
+    {
+      "name": "CorruptionOld",
+      "type": "block",
+      "sortid": 8,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "corruption_old",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/thecorruption/block/CorruptionOldBlock.java",
+          "src/main/resources/assets/corruption/models/item/corruption_old.json",
+          "src/main/resources/assets/corruption/models/block/corruption_old.json",
+          "src/main/resources/assets/corruption/blockstates/corruption_old.json"
+        ]
+      }
+    },
+    {
+      "name": "CorruptionClientDisplayRandomTick",
+      "type": "procedure",
+      "sortid": 10,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "corruption_client_display_random_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/thecorruption/procedures/CorruptionClientDisplayRandomTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "TestOnEffectActiveTick",
+      "type": "procedure",
+      "sortid": 11,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "test_on_effect_active_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/thecorruption/procedures/TestOnEffectActiveTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "CorruptionimmunityOnEffectActiveTick",
+      "type": "procedure",
+      "sortid": 12,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "corruptionimmunity_on_effect_active_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/thecorruption/procedures/CorruptionimmunityOnEffectActiveTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Corruptionimmunity",
+      "type": "potioneffect",
+      "sortid": 13,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "corruptionimmunity",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/thecorruption/potion/CorruptionimmunityMobEffect.java"
+        ]
+      }
+    },
+    {
+      "name": "CorruptionImmunityPotion",
+      "type": "potion",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "corruption_immunity_potion",
+      "metadata": {
+        "files": []
+      }
     }
   ],
   "variable_elements": [],
@@ -147,7 +268,14 @@
       "advancements.corrupted.title": "Corrupted?",
       "block.the_corruption.corruption": "Corruption",
       "block.corruption.corruption": "Corruption",
-      "advancements.corrupted.descr": "What is this, corruption; it seems to weaken me!"
+      "block.corruption.corruption_old": "Corruption Old",
+      "item.minecraft.lingering_potion.effect.corruption_immunity_potion": "Lingering Potion of Corruption Immunity",
+      "item.minecraft.potion.effect.corruption_immunity_potion": "Potion of Corruption Immunity",
+      "effect.corruption.test": "Corrupting",
+      "effect.corruption.corruptionimmunity": "Corruption immunity",
+      "item.minecraft.splash_potion.effect.corruption_immunity_potion": "Splash Potion of Corruption Immunity",
+      "advancements.corrupted.descr": "What is this, corruption; it seems to weaken me!",
+      "item.minecraft.tipped_arrow.effect.corruption_immunity_potion": "Arrow of Corruption Immunity"
     }
   },
   "foldersRoot": {

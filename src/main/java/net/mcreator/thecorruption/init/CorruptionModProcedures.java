@@ -4,9 +4,12 @@
  */
 package net.mcreator.thecorruption.init;
 
+import net.mcreator.thecorruption.procedures.TestOnEffectActiveTickProcedure;
 import net.mcreator.thecorruption.procedures.StartpProcedure;
+import net.mcreator.thecorruption.procedures.CorruptionimmunityOnEffectActiveTickProcedure;
 import net.mcreator.thecorruption.procedures.CorruptionSpreadProcedure;
 import net.mcreator.thecorruption.procedures.CorruptionEntityWalksOnTheBlockProcedure;
+import net.mcreator.thecorruption.procedures.CorruptionClientDisplayRandomTickProcedure;
 
 @SuppressWarnings("InstantiationOfUtilityClass")
 public class CorruptionModProcedures {
@@ -14,5 +17,8 @@ public class CorruptionModProcedures {
 		new CorruptionEntityWalksOnTheBlockProcedure();
 		new CorruptionSpreadProcedure();
 		new StartpProcedure();
+		new CorruptionClientDisplayRandomTickProcedure();
+		new TestOnEffectActiveTickProcedure();
+		new CorruptionimmunityOnEffectActiveTickProcedure();
 	}
 }

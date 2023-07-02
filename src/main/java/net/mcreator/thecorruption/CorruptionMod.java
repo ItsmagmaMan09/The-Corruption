@@ -16,6 +16,8 @@ import org.apache.logging.log4j.Logger;
 import org.apache.logging.log4j.LogManager;
 
 import net.mcreator.thecorruption.init.CorruptionModProcedures;
+import net.mcreator.thecorruption.init.CorruptionModPotions;
+import net.mcreator.thecorruption.init.CorruptionModMobEffects;
 import net.mcreator.thecorruption.init.CorruptionModItems;
 import net.mcreator.thecorruption.init.CorruptionModBlocks;
 
@@ -28,6 +30,9 @@ public class CorruptionMod implements ModInitializer {
 	@Override
 	public void onInitialize() {
 		LOGGER.info("Initializing CorruptionMod");
+
+		CorruptionModMobEffects.load();
+		CorruptionModPotions.load();
 
 		CorruptionModBlocks.load();
 		CorruptionModItems.load();

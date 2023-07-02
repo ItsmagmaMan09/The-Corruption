@@ -2,13 +2,13 @@ package net.mcreator.thecorruption.procedures;
 
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
-import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.advancements.AdvancementProgress;
 import net.minecraft.advancements.Advancement;
 
+import net.mcreator.thecorruption.init.CorruptionModMobEffects;
 import net.mcreator.thecorruption.CorruptionMod;
 
 import java.util.Map;
@@ -31,6 +31,6 @@ public class CorruptionEntityWalksOnTheBlockProcedure {
 			}
 		}
 		if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-			_entity.addEffect(new MobEffectInstance(MobEffects.WITHER, 1, 1));
+			_entity.addEffect(new MobEffectInstance(CorruptionModMobEffects.TEST, 20, 1));
 	}
 }

@@ -2,5 +2,12 @@
   "advancements.corrupted.title": "Corrupted?",
   "block.the_corruption.corruption": "Corruption",
   "block.corruption.corruption": "Corruption",
-  "advancements.corrupted.descr": "What is this, corruption; it seems to weaken me!"
+  "block.corruption.corruption_old": "Corruption Old",
+  "item.minecraft.lingering_potion.effect.corruption_immunity_potion": "Lingering Potion of Corruption Immunity",
+  "item.minecraft.potion.effect.corruption_immunity_potion": "Potion of Corruption Immunity",
+  "effect.corruption.test": "Corrupting",
+  "effect.corruption.corruptionimmunity": "Corruption immunity",
+  "item.minecraft.splash_potion.effect.corruption_immunity_potion": "Splash Potion of Corruption Immunity",
+  "advancements.corrupted.descr": "What is this, corruption; it seems to weaken me!",
+  "item.minecraft.tipped_arrow.effect.corruption_immunity_potion": "Arrow of Corruption Immunity"
 }

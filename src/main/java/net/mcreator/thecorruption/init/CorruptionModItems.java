@@ -14,8 +14,10 @@ import net.mcreator.thecorruption.CorruptionMod;
 
 public class CorruptionModItems {
 	public static Item CORRUPTION;
+	public static Item CORRUPTION_OLD;
 
 	public static void load() {
 		CORRUPTION = Registry.register(BuiltInRegistries.ITEM, new ResourceLocation(CorruptionMod.MODID, "corruption"), new BlockItem(CorruptionModBlocks.CORRUPTION, new Item.Properties()));
+		CORRUPTION_OLD = Registry.register(BuiltInRegistries.ITEM, new ResourceLocation(CorruptionMod.MODID, "corruption_old"), new BlockItem(CorruptionModBlocks.CORRUPTION_OLD, new Item.Properties()));
 	}
 }
