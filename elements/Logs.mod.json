@@ -7,12 +7,15 @@
     "blocks": [
       {
         "value": "CUSTOM:Corruption"
+      },
+      {
+        "value": "CUSTOM:CorruptionOld"
       }
     ],
     "functions": [],
     "entities": [],
     "biomes": [],
-    "name": "log",
+    "name": "logs",
     "namespace": "minecraft"
   }
 }

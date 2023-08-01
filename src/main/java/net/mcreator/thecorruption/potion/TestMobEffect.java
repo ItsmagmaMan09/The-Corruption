@@ -15,7 +15,7 @@ public class TestMobEffect extends MobEffect {
 
 	@Override
 	public String getDescriptionId() {
-		return "effect.corruption.test";
+		return "effect.corruption.corrupting";
 	}
 
 	@Override

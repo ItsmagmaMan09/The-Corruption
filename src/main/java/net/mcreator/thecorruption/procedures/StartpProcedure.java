@@ -26,7 +26,7 @@ public class StartpProcedure {
 		}
 		LevelAccessor world = (LevelAccessor) dependencies.get("world");
 		Entity entity = (Entity) dependencies.get("entity");
-		world.setBlock(new BlockPos(0, -64, 0), CorruptionModBlocks.CORRUPTION.defaultBlockState(), 3);
+		world.setBlock(new BlockPos(0, -59, 0), CorruptionModBlocks.CORRUPTION.defaultBlockState(), 3);
 		if (entity instanceof Player _player && !_player.level().isClientSide())
 			_player.displayClientMessage(Component.literal("The Corruption Spread Has Started!"), true);
 	}

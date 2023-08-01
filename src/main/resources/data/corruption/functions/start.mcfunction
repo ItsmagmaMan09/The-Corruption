@@ -1,1 +1,1 @@
-setblock 0 -64 0 corruption:corruption
+setblock 0 -59 0 corruption:corruption

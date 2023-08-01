@@ -1,0 +1,21 @@
+{
+  "_fv": 43,
+  "_type": "tag",
+  "definition": {
+    "type": "Entities",
+    "items": [],
+    "blocks": [],
+    "functions": [],
+    "entities": [
+      {
+        "value": "EntityCaveSpider"
+      },
+      {
+        "value": "EntitySpider"
+      }
+    ],
+    "biomes": [],
+    "name": "spider",
+    "namespace": "mod"
+  }
+}

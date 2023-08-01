@@ -1,0 +1,27 @@
+{
+  "_fv": 43,
+  "_type": "tag",
+  "definition": {
+    "type": "Entities",
+    "items": [],
+    "blocks": [],
+    "functions": [],
+    "entities": [
+      {
+        "value": "EntityZombie"
+      },
+      {
+        "value": "EntityZombieVillager"
+      },
+      {
+        "value": "EntityHusk"
+      },
+      {
+        "value": "EntityDrowned"
+      }
+    ],
+    "biomes": [],
+    "name": "zombie",
+    "namespace": "mod"
+  }
+}

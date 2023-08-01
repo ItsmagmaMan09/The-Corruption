@@ -42,7 +42,7 @@
     "hasGravity": false,
     "isWaterloggable": false,
     "creativeTab": {
-      "value": "No creative tab entry"
+      "value": "DECORATIONS"
     },
     "destroyTool": "Not specified",
     "customDrop": {
@@ -58,8 +58,8 @@
     "material": {
       "value": "ROCK"
     },
-    "tickRate": 0,
-    "tickRandomly": true,
+    "tickRate": 30,
+    "tickRandomly": false,
     "isReplaceable": false,
     "canProvidePower": false,
     "emittedRedstonePower": {

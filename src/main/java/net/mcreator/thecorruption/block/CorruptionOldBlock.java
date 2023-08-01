@@ -24,7 +24,7 @@ import java.util.List;
 import java.util.Collections;
 
 public class CorruptionOldBlock extends Block {
-	public static BlockBehaviour.Properties PROPERTIES = BlockBehaviour.Properties.of().sound(SoundType.GRAVEL).strength(1f, 10f);
+	public static BlockBehaviour.Properties PROPERTIES = BlockBehaviour.Properties.of().sound(SoundType.STONE).strength(1f, 10f).speedFactor(0.5f).jumpFactor(0.5f);
 
 	public CorruptionOldBlock() {
 		super(PROPERTIES);
@@ -46,7 +46,7 @@ public class CorruptionOldBlock extends Block {
 	@Override
 	public void stepOn(Level world, BlockPos pos, BlockState blockstate, Entity entity) {
 		super.stepOn(world, pos, blockstate, entity);
-		CorruptionEntityWalksOnTheBlockProcedure.execute(com.google.common.collect.ImmutableMap.<String, Object>builder().put("entity", entity).build());
+		CorruptionEntityWalksOnTheBlockProcedure.execute(com.google.common.collect.ImmutableMap.<String, Object>builder().put("x", pos.getX()).put("y", pos.getY()).put("z", pos.getZ()).put("world", world).put("entity", entity).build());
 	}
 
 	@Environment(EnvType.CLIENT)

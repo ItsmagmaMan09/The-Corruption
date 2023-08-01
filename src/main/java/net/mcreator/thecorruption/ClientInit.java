@@ -12,6 +12,8 @@
 */
 package net.mcreator.thecorruption;
 
+import net.mcreator.thecorruption.init.CorruptionModModels;
+import net.mcreator.thecorruption.init.CorruptionModEntityRenderers;
 import net.mcreator.thecorruption.init.CorruptionModBlocks;
 
 import net.fabricmc.api.Environment;
@@ -25,5 +27,7 @@ public class ClientInit implements ClientModInitializer {
 
 		CorruptionModBlocks.clientLoad();
 
+		CorruptionModModels.load();
+		CorruptionModEntityRenderers.load();
 	}
 }

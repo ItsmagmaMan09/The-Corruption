@@ -1,0 +1,27 @@
+{
+  "_fv": 43,
+  "_type": "tag",
+  "definition": {
+    "type": "Entities",
+    "items": [],
+    "blocks": [],
+    "functions": [],
+    "entities": [
+      {
+        "value": "CUSTOM:CorruptCreeper"
+      },
+      {
+        "value": "CUSTOM:CorruptSkeleton"
+      },
+      {
+        "value": "CUSTOM:CorruptSpider"
+      },
+      {
+        "value": "CUSTOM:CorruptZombie"
+      }
+    ],
+    "biomes": [],
+    "name": "iscorrupted",
+    "namespace": "mod"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "display": {
+    "icon": {
+      "item": "corruption:the_restore"
+    },
+    "title": {
+      "translate": "advancements.its_called_healing.title"
+    },
+    "description": {
+      "translate": "advancements.its_called_healing.descr"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": true
+  },
+  "criteria": {
+    "its_called_healing": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "corruption:the_restore"
+            ],
+            "count": {
+              "min": 1,
+              "max": 1
+            }
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "experience": 30
+  },
+  "parent": "corruption:corrupted"
+}

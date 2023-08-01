@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "corruption:block/therestore",
+    "up": "corruption:block/therestore",
+    "north": "corruption:block/therestore",
+    "east": "corruption:block/therestore",
+    "south": "corruption:block/therestore",
+    "west": "corruption:block/therestore",
+    "particle": "corruption:block/therestore"
+  },
+  "render_type": "solid"
+}

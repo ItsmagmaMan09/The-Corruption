@@ -2,7 +2,7 @@
   "_fv": 43,
   "_type": "function",
   "definition": {
-    "code": "setblock 0 -64 0 corruption:corruption",
+    "code": "setblock 0 -59 0 corruption:corruption",
     "name": "start",
     "namespace": "mod"
   }

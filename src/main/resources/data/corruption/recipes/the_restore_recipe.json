@@ -1,0 +1,42 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "012",
+    "345",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "corruption:restore_shard"
+    },
+    "1": {
+      "item": "corruption:restore_shard"
+    },
+    "2": {
+      "item": "corruption:restore_shard"
+    },
+    "3": {
+      "item": "corruption:restore_shard"
+    },
+    "4": {
+      "item": "corruption:restore_shard"
+    },
+    "5": {
+      "item": "corruption:restore_shard"
+    },
+    "6": {
+      "item": "corruption:restore_shard"
+    },
+    "7": {
+      "item": "corruption:restore_shard"
+    },
+    "8": {
+      "item": "corruption:restore_shard"
+    }
+  },
+  "result": {
+    "item": "corruption:the_restore",
+    "count": 1
+  }
+}

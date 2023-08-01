@@ -19,6 +19,8 @@ import net.mcreator.thecorruption.init.CorruptionModProcedures;
 import net.mcreator.thecorruption.init.CorruptionModPotions;
 import net.mcreator.thecorruption.init.CorruptionModMobEffects;
 import net.mcreator.thecorruption.init.CorruptionModItems;
+import net.mcreator.thecorruption.init.CorruptionModEntities;
+import net.mcreator.thecorruption.init.CorruptionModBrewingRecipes;
 import net.mcreator.thecorruption.init.CorruptionModBlocks;
 
 import net.fabricmc.api.ModInitializer;
@@ -33,11 +35,13 @@ public class CorruptionMod implements ModInitializer {
 
 		CorruptionModMobEffects.load();
 		CorruptionModPotions.load();
-
+		CorruptionModEntities.load();
 		CorruptionModBlocks.load();
 		CorruptionModItems.load();
 
 		CorruptionModProcedures.load();
+
+		CorruptionModBrewingRecipes.load();
 
 	}
 }

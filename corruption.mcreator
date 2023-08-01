@@ -48,32 +48,6 @@
       }
     },
     {
-      "name": "Dirt",
-      "type": "tag",
-      "sortid": 4,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "dirt",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/minecraft/tags/blocks/dirt.json"
-        ]
-      }
-    },
-    {
-      "name": "Log",
-      "type": "tag",
-      "sortid": 3,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "log",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/minecraft/tags/blocks/log.json"
-        ]
-      }
-    },
-    {
       "name": "CorruptionEntityWalksOnTheBlock",
       "type": "procedure",
       "sortid": 5,
@@ -88,6 +62,22 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       }
@@ -95,6 +85,7 @@
     {
       "name": "Corrupted",
       "type": "achievement",
+      "sortid": 19,
       "compiles": true,
       "locked_code": false,
       "registry_name": "corrupted",
@@ -128,24 +119,12 @@
       }
     },
     {
-      "name": "Start",
-      "type": "function",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "start",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/corruption/functions/start.mcfunction"
-        ]
-      }
-    },
-    {
       "name": "Test",
       "type": "potioneffect",
       "sortid": 14,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "test",
+      "registry_name": "corrupting",
       "metadata": {
         "files": [
           "src/main/java/net/mcreator/thecorruption/potion/TestMobEffect.java"
@@ -169,37 +148,6 @@
       }
     },
     {
-      "name": "CorruptionClientDisplayRandomTick",
-      "type": "procedure",
-      "sortid": 10,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "corruption_client_display_random_tick",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/thecorruption/procedures/CorruptionClientDisplayRandomTickProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      }
-    },
-    {
       "name": "TestOnEffectActiveTick",
       "type": "procedure",
       "sortid": 11,
@@ -209,25 +157,6 @@
       "metadata": {
         "files": [
           "src/main/java/net/mcreator/thecorruption/procedures/TestOnEffectActiveTickProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      }
-    },
-    {
-      "name": "CorruptionimmunityOnEffectActiveTick",
-      "type": "procedure",
-      "sortid": 12,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "corruptionimmunity_on_effect_active_tick",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/thecorruption/procedures/CorruptionimmunityOnEffectActiveTickProcedure.java"
         ],
         "dependencies": [
           {
@@ -259,23 +188,353 @@
       "metadata": {
         "files": []
       }
+    },
+    {
+      "name": "CorruptionImmunityPotionRecipe",
+      "type": "recipe",
+      "sortid": 35,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "corruption_immunity_potion_recipe",
+      "metadata": {
+        "files": []
+      }
+    },
+    {
+      "name": "Logs",
+      "type": "tag",
+      "sortid": 15,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "logs",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/minecraft/tags/blocks/logs.json"
+        ]
+      }
+    },
+    {
+      "name": "TheRestoreUpdateTick",
+      "type": "procedure",
+      "sortid": 16,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "the_restore_update_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/thecorruption/procedures/TheRestoreUpdateTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "TheRestore",
+      "type": "block",
+      "sortid": 17,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "the_restore",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/corruption/blockstates/the_restore.json",
+          "src/main/java/net/mcreator/thecorruption/block/TheRestoreBlock.java",
+          "src/main/resources/assets/corruption/models/item/the_restore.json",
+          "src/main/resources/assets/corruption/models/block/the_restore.json"
+        ]
+      }
+    },
+    {
+      "name": "Start",
+      "type": "function",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "start",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/corruption/functions/start.mcfunction"
+        ]
+      }
+    },
+    {
+      "name": "ItsCalledHealing",
+      "type": "achievement",
+      "sortid": 18,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "its_called_healing",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/corruption/advancements/its_called_healing.json"
+        ]
+      }
+    },
+    {
+      "name": "NonCorrupt",
+      "type": "tag",
+      "sortid": 20,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "non_corrupt",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/corruption/tags/blocks/non_corrupt.json"
+        ]
+      }
+    },
+    {
+      "name": "CorruptZombie",
+      "type": "livingentity",
+      "sortid": 21,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "corrupt_zombie",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/thecorruption/entity/CorruptZombieEntity.java",
+          "src/main/java/net/mcreator/thecorruption/client/renderer/CorruptZombieRenderer.java",
+          "src/main/resources/assets/corruption/models/item/corrupt_zombie_spawn_egg.json"
+        ]
+      }
+    },
+    {
+      "name": "CorruptSkeleton",
+      "type": "livingentity",
+      "sortid": 22,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "corrupt_skeleton",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/thecorruption/entity/CorruptSkeletonEntity.java",
+          "src/main/resources/assets/corruption/models/item/corrupt_skeleton_spawn_egg.json",
+          "src/main/java/net/mcreator/thecorruption/client/renderer/CorruptSkeletonRenderer.java"
+        ]
+      }
+    },
+    {
+      "name": "CorruptMobPremCorruptImun",
+      "type": "procedure",
+      "sortid": 23,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "corrupt_mob_prem_corrupt_imun",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/thecorruption/procedures/CorruptMobPremCorruptImunProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "CorruptCreeper",
+      "type": "livingentity",
+      "sortid": 24,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "corrupt_creeper",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/thecorruption/client/renderer/CorruptCreeperRenderer.java",
+          "src/main/resources/assets/corruption/models/item/corrupt_creeper_spawn_egg.json",
+          "src/main/java/net/mcreator/thecorruption/entity/CorruptCreeperEntity.java"
+        ]
+      }
+    },
+    {
+      "name": "Zombie",
+      "type": "tag",
+      "sortid": 25,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "zombie",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/corruption/tags/entity_types/zombie.json"
+        ]
+      }
+    },
+    {
+      "name": "Skeleton",
+      "type": "tag",
+      "sortid": 26,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "skeleton",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/corruption/tags/entity_types/skeleton.json"
+        ]
+      }
+    },
+    {
+      "name": "Creeper",
+      "type": "tag",
+      "sortid": 27,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "creeper",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/corruption/tags/entity_types/creeper.json"
+        ]
+      }
+    },
+    {
+      "name": "CorruptSpider",
+      "type": "livingentity",
+      "sortid": 28,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "corrupt_spider",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/thecorruption/entity/CorruptSpiderEntity.java",
+          "src/main/java/net/mcreator/thecorruption/client/renderer/CorruptSpiderRenderer.java",
+          "src/main/resources/assets/corruption/models/item/corrupt_spider_spawn_egg.json"
+        ]
+      }
+    },
+    {
+      "name": "Spider",
+      "type": "tag",
+      "sortid": 29,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "spider",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/corruption/tags/entity_types/spider.json"
+        ]
+      }
+    },
+    {
+      "name": "TheRestoreBlockIsPlacedBy",
+      "type": "procedure",
+      "sortid": 30,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "the_restore_block_is_placed_by",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/thecorruption/procedures/TheRestoreBlockIsPlacedByProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Iscorrupted",
+      "type": "tag",
+      "sortid": 31,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "iscorrupted",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/corruption/tags/entity_types/iscorrupted.json"
+        ]
+      }
+    },
+    {
+      "name": "TheRestoreEntityWalksOnTheBlock",
+      "type": "procedure",
+      "sortid": 32,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "the_restore_entity_walks_on_the_block",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/thecorruption/procedures/TheRestoreEntityWalksOnTheBlockProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "RestoreShard",
+      "type": "item",
+      "sortid": 33,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "restore_shard",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/corruption/models/item/restore_shard.json",
+          "src/main/java/net/mcreator/thecorruption/item/RestoreShardItem.java"
+        ]
+      }
+    },
+    {
+      "name": "TheRestoreRecipe",
+      "type": "recipe",
+      "sortid": 34,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "the_restore_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/corruption/recipes/the_restore_recipe.json"
+        ]
+      }
     }
   ],
   "variable_elements": [],
   "sound_elements": [],
   "language_map": {
     "en_us": {
+      "effect.corruption.corrupting": "Corrupting",
       "advancements.corrupted.title": "Corrupted?",
-      "block.the_corruption.corruption": "Corruption",
+      "entity.corruption.corrupt_zombie": "Corrupt Zombie",
+      "entity.corruption.corrupt_creeper": "Corrupt Creeper",
       "block.corruption.corruption": "Corruption",
+      "block.the_corruption.corruption": "Corruption",
+      "item.minecraft.potion.effect.corruption_immunity_potion": "Potion of Corruption Immunity",
+      "entity.corruption.corrupt_skeleton": "Corrupt Skeleton",
+      "item.corruption.restore_shard": "Restore Shard",
+      "effect.corruption.corruptionimmunity": "Corruption immunity",
+      "item.corruption.corrupt_creeper_spawn_egg": "Corrupt Creeper Spawn Egg",
+      "item.corruption.corrupt_zombie_spawn_egg": "Corrupt Zombie Spawn Egg",
+      "advancements.its_called_healing.descr": "Obtain The Restore",
       "block.corruption.corruption_old": "Corruption Old",
       "item.minecraft.lingering_potion.effect.corruption_immunity_potion": "Lingering Potion of Corruption Immunity",
-      "item.minecraft.potion.effect.corruption_immunity_potion": "Potion of Corruption Immunity",
-      "effect.corruption.test": "Corrupting",
-      "effect.corruption.corruptionimmunity": "Corruption immunity",
+      "block.corruption.the_restore": "The Restore",
+      "item.corruption.corrupt_skeleton_spawn_egg": "Corrupt Skeleton Spawn Egg",
+      "item.corruption.corrupt_spider_spawn_egg": "Corrupt Spider Spawn Egg",
       "item.minecraft.splash_potion.effect.corruption_immunity_potion": "Splash Potion of Corruption Immunity",
+      "entity.corruption.corrupt_spider": "Corrupt Spider",
       "advancements.corrupted.descr": "What is this, corruption; it seems to weaken me!",
-      "item.minecraft.tipped_arrow.effect.corruption_immunity_potion": "Arrow of Corruption Immunity"
+      "item.minecraft.tipped_arrow.effect.corruption_immunity_potion": "Arrow of Corruption Immunity",
+      "advancements.its_called_healing.title": "Its Called Healing"
     }
   },
   "foldersRoot": {
@@ -285,10 +544,10 @@
   "workspaceSettings": {
     "modid": "corruption",
     "modName": "The Corruption",
-    "version": "1.0.0",
+    "version": "1.2.0",
     "description": "A mod that adds a block to start corupting your world",
     "author": "ItsMagmaMan",
-    "websiteURL": "https://www.youtube.com/channel/UCB_JHhmO5BL8_5CP_2Lx6ZQ",
+    "websiteURL": "https://modrinth.com/mod/the-corruption",
     "license": "All Rights Reserved",
     "disableForgeVersionCheck": true,
     "serverSideOnly": false,

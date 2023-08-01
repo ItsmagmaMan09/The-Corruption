@@ -15,10 +15,10 @@ import net.mcreator.thecorruption.CorruptionMod;
 
 public class CorruptionModMobEffects {
 	public static MobEffect CORRUPTIONIMMUNITY;
-	public static MobEffect TEST;
+	public static MobEffect CORRUPTING;
 
 	public static void load() {
 		CORRUPTIONIMMUNITY = Registry.register(BuiltInRegistries.MOB_EFFECT, new ResourceLocation(CorruptionMod.MODID, "corruptionimmunity"), new CorruptionimmunityMobEffect());
-		TEST = Registry.register(BuiltInRegistries.MOB_EFFECT, new ResourceLocation(CorruptionMod.MODID, "test"), new TestMobEffect());
+		CORRUPTING = Registry.register(BuiltInRegistries.MOB_EFFECT, new ResourceLocation(CorruptionMod.MODID, "corrupting"), new TestMobEffect());
 	}
 }

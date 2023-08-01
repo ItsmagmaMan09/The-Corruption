@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "corruption:corrupt_spider",
+    "corruption:corrupt_skeleton",
+    "corruption:corrupt_creeper",
+    "corruption:corrupt_zombie"
+  ]
+}

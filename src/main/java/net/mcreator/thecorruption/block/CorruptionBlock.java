@@ -30,7 +30,7 @@ import java.util.List;
 import java.util.Collections;
 
 public class CorruptionBlock extends Block {
-	public static BlockBehaviour.Properties PROPERTIES = BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_BLACK).sound(SoundType.STONE).strength(-1, 3600000).speedFactor(0.5f).jumpFactor(0.5f).randomTicks();
+	public static BlockBehaviour.Properties PROPERTIES = BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_BLACK).sound(SoundType.STONE).strength(-1, 3600000).speedFactor(0.5f).jumpFactor(0.5f);
 
 	public CorruptionBlock() {
 		super(PROPERTIES);
@@ -56,18 +56,25 @@ public class CorruptionBlock extends Block {
 	}
 
 	@Override
+	public void onPlace(BlockState blockstate, Level world, BlockPos pos, BlockState oldState, boolean moving) {
+		super.onPlace(blockstate, world, pos, oldState, moving);
+		world.scheduleTick(pos, this, 30);
+	}
+
+	@Override
 	public void tick(BlockState blockstate, ServerLevel world, BlockPos pos, RandomSource random) {
 		super.tick(blockstate, world, pos, random);
 		int x = pos.getX();
 		int y = pos.getY();
 		int z = pos.getZ();
 		CorruptionSpreadProcedure.execute(com.google.common.collect.ImmutableMap.<String, Object>builder().put("world", world).put("x", x).put("y", y).put("z", z).build());
+		world.scheduleTick(pos, this, 30);
 	}
 
 	@Override
 	public void stepOn(Level world, BlockPos pos, BlockState blockstate, Entity entity) {
 		super.stepOn(world, pos, blockstate, entity);
-		CorruptionEntityWalksOnTheBlockProcedure.execute(com.google.common.collect.ImmutableMap.<String, Object>builder().put("entity", entity).build());
+		CorruptionEntityWalksOnTheBlockProcedure.execute(com.google.common.collect.ImmutableMap.<String, Object>builder().put("x", pos.getX()).put("y", pos.getY()).put("z", pos.getZ()).put("world", world).put("entity", entity).build());
 	}
 
 	@Environment(EnvType.CLIENT)

@@ -1,14 +1,14 @@
 {
   "schemaVersion": 1,
   "id": "corruption",
-  "version": "1.0.0",
+  "version": "1.2.0",
   "name": "The Corruption",
   "description": "A mod that adds a block to start corupting your world",
   "authors": [
     "ItsMagmaMan"
   ],
   "contact": {
-    "homepage": "https://www.youtube.com/channel/UCB_JHhmO5BL8_5CP_2Lx6ZQ",
+    "homepage": "https://modrinth.com/mod/the-corruption",
     "sources": ""
   },
   "license": "All Rights Reserved",

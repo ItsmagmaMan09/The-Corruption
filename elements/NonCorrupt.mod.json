@@ -1,0 +1,36 @@
+{
+  "_fv": 43,
+  "_type": "tag",
+  "definition": {
+    "type": "Blocks",
+    "items": [],
+    "blocks": [
+      {
+        "value": "CUSTOM:Corruption"
+      },
+      {
+        "value": "CUSTOM:CorruptionOld"
+      },
+      {
+        "value": "CUSTOM:TheRestore"
+      },
+      {
+        "value": "Blocks.BEDROCK"
+      },
+      {
+        "value": "Blocks.FLOWING_WATER"
+      },
+      {
+        "value": "Blocks.WATER"
+      },
+      {
+        "value": "Blocks.AIR"
+      }
+    ],
+    "functions": [],
+    "entities": [],
+    "biomes": [],
+    "name": "non_corrupt",
+    "namespace": "mod"
+  }
+}

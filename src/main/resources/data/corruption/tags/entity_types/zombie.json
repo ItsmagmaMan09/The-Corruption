@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "drowned",
+    "zombie",
+    "husk",
+    "zombie_villager"
+  ]
+}
