@@ -4,12 +4,8 @@
     "icon": {
       "item": "corruption:corruption"
     },
-    "title": {
-      "translate": "advancements.corrupted.title"
-    },
-    "description": {
-      "translate": "advancements.corrupted.descr"
-    },
+    "title": "Corrupted?",
+    "description": "What is this, corruption; it seems to weaken me!",
     "frame": "task",
     "show_toast": true,
     "announce_to_chat": true,

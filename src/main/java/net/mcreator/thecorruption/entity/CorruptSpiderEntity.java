@@ -35,7 +35,7 @@ import net.mcreator.thecorruption.procedures.CorruptMobPremCorruptImunProcedure;
 public class CorruptSpiderEntity extends Spider {
 	public CorruptSpiderEntity(EntityType<CorruptSpiderEntity> type, Level world) {
 		super(type, world);
-		setMaxUpStep(0.6f);
+		setMaxUpStep(1.2f);
 		xpReward = 0;
 		setNoAi(false);
 	}
@@ -94,7 +94,7 @@ public class CorruptSpiderEntity extends Spider {
 		double y = this.getY();
 		double z = this.getZ();
 		Entity entity = this;
-		CorruptMobPremCorruptImunProcedure.execute(com.google.common.collect.ImmutableMap.<String, Object>builder().put("entity", entity).build());
+		CorruptMobPremCorruptImunProcedure.execute(entity);
 		return retval;
 	}
 

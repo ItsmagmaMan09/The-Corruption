@@ -9,8 +9,8 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.Registry;
 
-import net.mcreator.thecorruption.potion.TestMobEffect;
 import net.mcreator.thecorruption.potion.CorruptionimmunityMobEffect;
+import net.mcreator.thecorruption.potion.CorruptingMobEffect;
 import net.mcreator.thecorruption.CorruptionMod;
 
 public class CorruptionModMobEffects {
@@ -19,6 +19,6 @@ public class CorruptionModMobEffects {
 
 	public static void load() {
 		CORRUPTIONIMMUNITY = Registry.register(BuiltInRegistries.MOB_EFFECT, new ResourceLocation(CorruptionMod.MODID, "corruptionimmunity"), new CorruptionimmunityMobEffect());
-		CORRUPTING = Registry.register(BuiltInRegistries.MOB_EFFECT, new ResourceLocation(CorruptionMod.MODID, "corrupting"), new TestMobEffect());
+		CORRUPTING = Registry.register(BuiltInRegistries.MOB_EFFECT, new ResourceLocation(CorruptionMod.MODID, "corrupting"), new CorruptingMobEffect());
 	}
 }

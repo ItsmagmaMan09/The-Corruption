@@ -4,6 +4,7 @@
  */
 package net.mcreator.thecorruption.init;
 
+import net.mcreator.thecorruption.client.renderer.CorruptedEndermanRenderer;
 import net.mcreator.thecorruption.client.renderer.CorruptZombieRenderer;
 import net.mcreator.thecorruption.client.renderer.CorruptSpiderRenderer;
 import net.mcreator.thecorruption.client.renderer.CorruptSkeletonRenderer;
@@ -20,5 +21,6 @@ public class CorruptionModEntityRenderers {
 		EntityRendererRegistry.register(CorruptionModEntities.CORRUPT_SKELETON, CorruptSkeletonRenderer::new);
 		EntityRendererRegistry.register(CorruptionModEntities.CORRUPT_CREEPER, CorruptCreeperRenderer::new);
 		EntityRendererRegistry.register(CorruptionModEntities.CORRUPT_SPIDER, CorruptSpiderRenderer::new);
+		EntityRendererRegistry.register(CorruptionModEntities.CORRUPTED_ENDERMAN, CorruptedEndermanRenderer::new);
 	}
 }

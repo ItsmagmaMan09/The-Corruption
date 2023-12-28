@@ -4,6 +4,7 @@
     "corruption:corrupt_spider",
     "corruption:corrupt_skeleton",
     "corruption:corrupt_creeper",
+    "corruption:corrupted_enderman",
     "corruption:corrupt_zombie"
   ]
 }

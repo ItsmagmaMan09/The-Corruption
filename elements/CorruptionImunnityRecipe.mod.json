@@ -1,5 +1,5 @@
 {
-  "_fv": 43,
+  "_fv": 47,
   "_type": "recipe",
   "definition": {
     "recipeType": "Brewing",
@@ -11,7 +11,7 @@
     "craftingBookCategory": "MISC",
     "recipeShapeless": false,
     "brewingInputStack": {
-      "value": "POTION:STRENGTH"
+      "value": "Items.POTIONITEM"
     },
     "brewingIngredientStack": {
       "value": "Items.DIAMOND"
@@ -19,7 +19,7 @@
     "brewingReturnStack": {
       "value": "POTION:CUSTOM:CorruptionImmunityPotion"
     },
-    "name": "corruption_immunity_potion_recipe",
+    "name": "corruption_imunnity_recipe",
     "namespace": "mod"
   }
 }

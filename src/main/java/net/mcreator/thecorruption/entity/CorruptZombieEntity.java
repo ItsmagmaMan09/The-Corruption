@@ -2,6 +2,7 @@ package net.mcreator.thecorruption.entity;
 
 import org.jetbrains.annotations.Nullable;
 
+import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.ServerLevelAccessor;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.projectile.ThrownPotion;
@@ -27,13 +28,14 @@ import net.minecraft.sounds.SoundEvent;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.core.BlockPos;
 
 import net.mcreator.thecorruption.procedures.CorruptMobPremCorruptImunProcedure;
 
 public class CorruptZombieEntity extends Zombie {
 	public CorruptZombieEntity(EntityType<CorruptZombieEntity> type, Level world) {
 		super(type, world);
-		setMaxUpStep(0.6f);
+		setMaxUpStep(1.2f);
 		xpReward = 0;
 		setNoAi(false);
 	}
@@ -64,13 +66,23 @@ public class CorruptZombieEntity extends Zombie {
 	}
 
 	@Override
+	public SoundEvent getAmbientSound() {
+		return BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("entity.zombie.ambient"));
+	}
+
+	@Override
+	public void playStepSound(BlockPos pos, BlockState blockIn) {
+		this.playSound(BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("entity.zombie.step")), 0.15f, 1);
+	}
+
+	@Override
 	public SoundEvent getHurtSound(DamageSource ds) {
-		return BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("entity.generic.hurt"));
+		return BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("entity.zombie.hurt"));
 	}
 
 	@Override
 	public SoundEvent getDeathSound() {
-		return BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("entity.generic.death"));
+		return BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("entity.zombie.death"));
 	}
 
 	@Override
@@ -87,7 +99,7 @@ public class CorruptZombieEntity extends Zombie {
 		double y = this.getY();
 		double z = this.getZ();
 		Entity entity = this;
-		CorruptMobPremCorruptImunProcedure.execute(com.google.common.collect.ImmutableMap.<String, Object>builder().put("entity", entity).build());
+		CorruptMobPremCorruptImunProcedure.execute(entity);
 		return retval;
 	}
 

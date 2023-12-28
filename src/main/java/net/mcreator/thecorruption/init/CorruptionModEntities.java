@@ -12,6 +12,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.Registry;
 
+import net.mcreator.thecorruption.entity.CorruptedEndermanEntity;
 import net.mcreator.thecorruption.entity.CorruptZombieEntity;
 import net.mcreator.thecorruption.entity.CorruptSpiderEntity;
 import net.mcreator.thecorruption.entity.CorruptSkeletonEntity;
@@ -26,6 +27,7 @@ public class CorruptionModEntities {
 	public static EntityType<CorruptSkeletonEntity> CORRUPT_SKELETON;
 	public static EntityType<CorruptCreeperEntity> CORRUPT_CREEPER;
 	public static EntityType<CorruptSpiderEntity> CORRUPT_SPIDER;
+	public static EntityType<CorruptedEndermanEntity> CORRUPTED_ENDERMAN;
 
 	public static void load() {
 		CORRUPT_ZOMBIE = Registry.register(BuiltInRegistries.ENTITY_TYPE, new ResourceLocation(CorruptionMod.MODID, "corrupt_zombie"),
@@ -33,7 +35,7 @@ public class CorruptionModEntities {
 		CorruptZombieEntity.init();
 		FabricDefaultAttributeRegistry.register(CORRUPT_ZOMBIE, CorruptZombieEntity.createAttributes());
 		CORRUPT_SKELETON = Registry.register(BuiltInRegistries.ENTITY_TYPE, new ResourceLocation(CorruptionMod.MODID, "corrupt_skeleton"),
-				FabricEntityTypeBuilder.create(MobCategory.MONSTER, CorruptSkeletonEntity::new).dimensions(new EntityDimensions(0.6f, 1.8f, true)).fireImmune().trackRangeBlocks(64).forceTrackedVelocityUpdates(true).trackedUpdateRate(3).build());
+				FabricEntityTypeBuilder.create(MobCategory.MONSTER, CorruptSkeletonEntity::new).dimensions(new EntityDimensions(0.6f, 2f, true)).fireImmune().trackRangeBlocks(64).forceTrackedVelocityUpdates(true).trackedUpdateRate(3).build());
 		CorruptSkeletonEntity.init();
 		FabricDefaultAttributeRegistry.register(CORRUPT_SKELETON, CorruptSkeletonEntity.createAttributes());
 		CORRUPT_CREEPER = Registry.register(BuiltInRegistries.ENTITY_TYPE, new ResourceLocation(CorruptionMod.MODID, "corrupt_creeper"),
@@ -44,6 +46,10 @@ public class CorruptionModEntities {
 				FabricEntityTypeBuilder.create(MobCategory.MONSTER, CorruptSpiderEntity::new).dimensions(new EntityDimensions(1.4f, 0.9f, true)).fireImmune().trackRangeBlocks(64).forceTrackedVelocityUpdates(true).trackedUpdateRate(3).build());
 		CorruptSpiderEntity.init();
 		FabricDefaultAttributeRegistry.register(CORRUPT_SPIDER, CorruptSpiderEntity.createAttributes());
+		CORRUPTED_ENDERMAN = Registry.register(BuiltInRegistries.ENTITY_TYPE, new ResourceLocation(CorruptionMod.MODID, "corrupted_enderman"),
+				FabricEntityTypeBuilder.create(MobCategory.MONSTER, CorruptedEndermanEntity::new).dimensions(new EntityDimensions(0.6f, 3f, true)).trackRangeBlocks(64).forceTrackedVelocityUpdates(true).trackedUpdateRate(3).build());
+		CorruptedEndermanEntity.init();
+		FabricDefaultAttributeRegistry.register(CORRUPTED_ENDERMAN, CorruptedEndermanEntity.createAttributes());
 	}
 
 	private static <T extends Entity> EntityType<T> createArrowEntityType(EntityType.EntityFactory<T> factory) {

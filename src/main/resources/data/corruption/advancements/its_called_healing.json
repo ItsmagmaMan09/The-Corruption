@@ -3,12 +3,8 @@
     "icon": {
       "item": "corruption:the_restore"
     },
-    "title": {
-      "translate": "advancements.its_called_healing.title"
-    },
-    "description": {
-      "translate": "advancements.its_called_healing.descr"
-    },
+    "title": "Its Called Healing",
+    "description": "Obtain The Restore",
     "frame": "challenge",
     "show_toast": true,
     "announce_to_chat": true,

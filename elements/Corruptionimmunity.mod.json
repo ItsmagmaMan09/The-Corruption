@@ -1,5 +1,5 @@
 {
-  "_fv": 43,
+  "_fv": 47,
   "_type": "potioneffect",
   "definition": {
     "effectName": "Corruption immunity",
@@ -12,6 +12,9 @@
     "isBad": false,
     "isBenefitical": true,
     "renderStatusInInventory": true,
-    "renderStatusInHUD": true
+    "renderStatusInHUD": true,
+    "onActiveTick": {
+      "name": "CorruptionimmunityOnEffectActiveTick"
+    }
   }
 }

@@ -1,0 +1,18 @@
+{
+  "_fv": 47,
+  "_type": "tag",
+  "definition": {
+    "type": "Entities",
+    "items": [],
+    "blocks": [],
+    "functions": [],
+    "entities": [
+      {
+        "value": "EntityEnderman"
+      }
+    ],
+    "biomes": [],
+    "name": "endermen",
+    "namespace": "mod"
+  }
+}

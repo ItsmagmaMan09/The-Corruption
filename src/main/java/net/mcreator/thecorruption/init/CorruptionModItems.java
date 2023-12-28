@@ -1,4 +1,3 @@
-
 /*
  *	MCreator note: This file will be REGENERATED on each build.
  */
@@ -13,6 +12,7 @@ import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.Registry;
 
 import net.mcreator.thecorruption.item.RestoreShardItem;
+import net.mcreator.thecorruption.item.CorruptedRemainsItem;
 import net.mcreator.thecorruption.CorruptionMod;
 
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
@@ -26,6 +26,8 @@ public class CorruptionModItems {
 	public static Item CORRUPT_CREEPER_SPAWN_EGG;
 	public static Item CORRUPT_SPIDER_SPAWN_EGG;
 	public static Item RESTORE_SHARD;
+	public static Item CORRUPTED_REMAINS;
+	public static Item CORRUPTED_ENDERMAN_SPAWN_EGG;
 
 	public static void load() {
 		CORRUPTION = Registry.register(BuiltInRegistries.ITEM, new ResourceLocation(CorruptionMod.MODID, "corruption"), new BlockItem(CorruptionModBlocks.CORRUPTION, new Item.Properties()));
@@ -44,5 +46,12 @@ public class CorruptionModItems {
 		CORRUPT_SPIDER_SPAWN_EGG = Registry.register(BuiltInRegistries.ITEM, new ResourceLocation(CorruptionMod.MODID, "corrupt_spider_spawn_egg"), new SpawnEggItem(CorruptionModEntities.CORRUPT_SPIDER, -16777216, -6750208, new Item.Properties()));
 		ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.SPAWN_EGGS).register(content -> content.accept(CORRUPT_SPIDER_SPAWN_EGG));
 		RESTORE_SHARD = Registry.register(BuiltInRegistries.ITEM, new ResourceLocation(CorruptionMod.MODID, "restore_shard"), new RestoreShardItem());
+		CORRUPTED_REMAINS = Registry.register(BuiltInRegistries.ITEM, new ResourceLocation(CorruptionMod.MODID, "corrupted_remains"), new CorruptedRemainsItem());
+		CORRUPTED_ENDERMAN_SPAWN_EGG = Registry.register(BuiltInRegistries.ITEM, new ResourceLocation(CorruptionMod.MODID, "corrupted_enderman_spawn_egg"),
+				new SpawnEggItem(CorruptionModEntities.CORRUPTED_ENDERMAN, -16777216, -6750208, new Item.Properties()));
+		ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.SPAWN_EGGS).register(content -> content.accept(CORRUPTED_ENDERMAN_SPAWN_EGG));
+	}
+
+	public static void clientLoad() {
 	}
 }

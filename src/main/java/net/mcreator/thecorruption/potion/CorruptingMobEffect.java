@@ -8,8 +8,8 @@ import net.minecraft.world.effect.MobEffect;
 
 import net.mcreator.thecorruption.procedures.TestOnEffectActiveTickProcedure;
 
-public class TestMobEffect extends MobEffect {
-	public TestMobEffect() {
+public class CorruptingMobEffect extends MobEffect {
+	public CorruptingMobEffect() {
 		super(MobEffectCategory.HARMFUL, -16777216);
 	}
 
@@ -19,18 +19,13 @@ public class TestMobEffect extends MobEffect {
 	}
 
 	@Override
-	public boolean isInstantenous() {
-		return true;
-	}
-
-	@Override
 	public void applyEffectTick(LivingEntity entity, int amplifier) {
 		Level world = entity.level();
 		double x = entity.getX();
 		double y = entity.getY();
 		double z = entity.getZ();
 
-		TestOnEffectActiveTickProcedure.execute(com.google.common.collect.ImmutableMap.<String, Object>builder().put("entity", entity).build());
+		TestOnEffectActiveTickProcedure.execute(entity);
 	}
 
 	@Override

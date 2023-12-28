@@ -7,19 +7,11 @@ import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.commands.CommandSource;
 
 import net.mcreator.thecorruption.init.CorruptionModMobEffects;
-import net.mcreator.thecorruption.CorruptionMod;
-
-import java.util.Map;
 
 public class TestOnEffectActiveTickProcedure {
-
-	public static void execute(Map<String, Object> dependencies) {
-		if (dependencies.get("entity") == null) {
-			if (!dependencies.containsKey("entity"))
-				CorruptionMod.LOGGER.warn("Failed to load dependency entity for procedure TestOnEffectActiveTick!");
+	public static void execute(Entity entity) {
+		if (entity == null)
 			return;
-		}
-		Entity entity = (Entity) dependencies.get("entity");
 		if (!(entity instanceof LivingEntity _livEnt0 && _livEnt0.hasEffect(CorruptionModMobEffects.CORRUPTIONIMMUNITY))) {
 			{
 				Entity _ent = entity;

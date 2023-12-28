@@ -2,6 +2,7 @@ package net.mcreator.thecorruption.entity;
 
 import org.jetbrains.annotations.Nullable;
 
+import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.ServerLevelAccessor;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.Items;
@@ -30,13 +31,14 @@ import net.minecraft.sounds.SoundEvent;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.core.BlockPos;
 
 import net.mcreator.thecorruption.procedures.CorruptMobPremCorruptImunProcedure;
 
 public class CorruptSkeletonEntity extends Skeleton {
 	public CorruptSkeletonEntity(EntityType<CorruptSkeletonEntity> type, Level world) {
 		super(type, world);
-		setMaxUpStep(0.6f);
+		setMaxUpStep(1.2f);
 		xpReward = 0;
 		setNoAi(false);
 		this.setItemSlot(EquipmentSlot.MAINHAND, new ItemStack(Items.BOW));
@@ -68,6 +70,11 @@ public class CorruptSkeletonEntity extends Skeleton {
 	}
 
 	@Override
+	public void playStepSound(BlockPos pos, BlockState blockIn) {
+		this.playSound(BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("entity.skeleton.step")), 0.15f, 1);
+	}
+
+	@Override
 	public SoundEvent getHurtSound(DamageSource ds) {
 		return BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("entity.skeleton.hurt"));
 	}
@@ -91,7 +98,7 @@ public class CorruptSkeletonEntity extends Skeleton {
 		double y = this.getY();
 		double z = this.getZ();
 		Entity entity = this;
-		CorruptMobPremCorruptImunProcedure.execute(com.google.common.collect.ImmutableMap.<String, Object>builder().put("entity", entity).build());
+		CorruptMobPremCorruptImunProcedure.execute(entity);
 		return retval;
 	}
 

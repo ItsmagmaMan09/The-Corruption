@@ -40,10 +40,10 @@
       "registry_name": "corruption",
       "metadata": {
         "files": [
-          "src/main/resources/assets/corruption/models/item/corruption.json",
+          "src/main/java/net/mcreator/thecorruption/block/CorruptionBlock.java",
           "src/main/resources/assets/corruption/blockstates/corruption.json",
           "src/main/resources/assets/corruption/models/block/corruption.json",
-          "src/main/java/net/mcreator/thecorruption/block/CorruptionBlock.java"
+          "src/main/resources/assets/corruption/models/item/corruption.json"
         ]
       }
     },
@@ -108,26 +108,9 @@
         ],
         "dependencies": [
           {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
             "name": "world",
             "type": "world"
           }
-        ]
-      }
-    },
-    {
-      "name": "Test",
-      "type": "potioneffect",
-      "sortid": 14,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "corrupting",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/thecorruption/potion/TestMobEffect.java"
         ]
       }
     },
@@ -142,8 +125,8 @@
         "files": [
           "src/main/java/net/mcreator/thecorruption/block/CorruptionOldBlock.java",
           "src/main/resources/assets/corruption/models/item/corruption_old.json",
-          "src/main/resources/assets/corruption/models/block/corruption_old.json",
-          "src/main/resources/assets/corruption/blockstates/corruption_old.json"
+          "src/main/resources/assets/corruption/blockstates/corruption_old.json",
+          "src/main/resources/assets/corruption/models/block/corruption_old.json"
         ]
       }
     },
@@ -185,17 +168,6 @@
       "compiles": true,
       "locked_code": false,
       "registry_name": "corruption_immunity_potion",
-      "metadata": {
-        "files": []
-      }
-    },
-    {
-      "name": "CorruptionImmunityPotionRecipe",
-      "type": "recipe",
-      "sortid": 35,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "corruption_immunity_potion_recipe",
       "metadata": {
         "files": []
       }
@@ -254,8 +226,8 @@
       "metadata": {
         "files": [
           "src/main/resources/assets/corruption/blockstates/the_restore.json",
-          "src/main/java/net/mcreator/thecorruption/block/TheRestoreBlock.java",
           "src/main/resources/assets/corruption/models/item/the_restore.json",
+          "src/main/java/net/mcreator/thecorruption/block/TheRestoreBlock.java",
           "src/main/resources/assets/corruption/models/block/the_restore.json"
         ]
       }
@@ -322,9 +294,9 @@
       "registry_name": "corrupt_skeleton",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/thecorruption/entity/CorruptSkeletonEntity.java",
           "src/main/resources/assets/corruption/models/item/corrupt_skeleton_spawn_egg.json",
-          "src/main/java/net/mcreator/thecorruption/client/renderer/CorruptSkeletonRenderer.java"
+          "src/main/java/net/mcreator/thecorruption/client/renderer/CorruptSkeletonRenderer.java",
+          "src/main/java/net/mcreator/thecorruption/entity/CorruptSkeletonEntity.java"
         ]
       }
     },
@@ -356,9 +328,9 @@
       "registry_name": "corrupt_creeper",
       "metadata": {
         "files": [
+          "src/main/java/net/mcreator/thecorruption/entity/CorruptCreeperEntity.java",
           "src/main/java/net/mcreator/thecorruption/client/renderer/CorruptCreeperRenderer.java",
-          "src/main/resources/assets/corruption/models/item/corrupt_creeper_spawn_egg.json",
-          "src/main/java/net/mcreator/thecorruption/entity/CorruptCreeperEntity.java"
+          "src/main/resources/assets/corruption/models/item/corrupt_creeper_spawn_egg.json"
         ]
       }
     },
@@ -506,35 +478,194 @@
           "src/main/resources/data/corruption/recipes/the_restore_recipe.json"
         ]
       }
+    },
+    {
+      "name": "Corrupting",
+      "type": "potioneffect",
+      "sortid": 35,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "corrupting",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/thecorruption/potion/CorruptingMobEffect.java"
+        ]
+      }
+    },
+    {
+      "name": "CorruptionimmunityOnEffectActiveTick",
+      "type": "procedure",
+      "sortid": 36,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "corruptionimmunity_on_effect_active_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/thecorruption/procedures/CorruptionimmunityOnEffectActiveTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "CorruptedRemainsPlayerFinishesUsingItem",
+      "type": "procedure",
+      "sortid": 37,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "corrupted_remains_player_finishes_using_item",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/thecorruption/procedures/CorruptedRemainsPlayerFinishesUsingItemProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "CorruptedRemains",
+      "type": "item",
+      "sortid": 38,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "corrupted_remains",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/corruption/models/item/corrupted_remains.json",
+          "src/main/java/net/mcreator/thecorruption/item/CorruptedRemainsItem.java"
+        ]
+      }
+    },
+    {
+      "name": "CCreeper",
+      "type": "loottable",
+      "sortid": 40,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "c_creeper",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/corruption/loot_tables/entities/corrupt_creeper.json"
+        ]
+      }
+    },
+    {
+      "name": "CZombie",
+      "type": "loottable",
+      "sortid": 39,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "c_zombie",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/corruption/loot_tables/entities/corrupt_zombie.json"
+        ]
+      }
+    },
+    {
+      "name": "CSkeleton",
+      "type": "loottable",
+      "sortid": 41,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "c_skeleton",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/corruption/loot_tables/entities/corrupt_skeleton.json"
+        ]
+      }
+    },
+    {
+      "name": "CSpider",
+      "type": "loottable",
+      "sortid": 42,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "c_spider",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/corruption/loot_tables/blocks/corrupt_spider.json"
+        ]
+      }
+    },
+    {
+      "name": "CorruptionImunnityRecipe",
+      "type": "recipe",
+      "sortid": 43,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "corruption_imunnity_recipe",
+      "metadata": {
+        "files": []
+      }
+    },
+    {
+      "name": "CorruptedEnderman",
+      "type": "livingentity",
+      "sortid": 44,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "corrupted_enderman",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/thecorruption/entity/CorruptedEndermanEntity.java",
+          "src/main/resources/assets/corruption/models/item/corrupted_enderman_spawn_egg.json",
+          "src/main/java/net/mcreator/thecorruption/client/renderer/CorruptedEndermanRenderer.java"
+        ]
+      }
+    },
+    {
+      "name": "Endermen",
+      "type": "tag",
+      "sortid": 45,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "endermen",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/corruption/tags/entity_types/endermen.json"
+        ]
+      }
     }
   ],
   "variable_elements": [],
   "sound_elements": [],
   "language_map": {
     "en_us": {
-      "effect.corruption.corrupting": "Corrupting",
       "advancements.corrupted.title": "Corrupted?",
+      "block.corruption.corruption": "Corruption",
+      "effect.corruption.corruptionimmunity": "Corruption immunity",
+      "entity.corruption.corrupted_enderman": "Corrupted Enderman",
+      "item.corruption.corrupt_zombie_spawn_egg": "Corrupt Zombie Spawn Egg",
+      "block.corruption.corruption_old": "Corruption Old",
+      "item.minecraft.lingering_potion.effect.corruption_immunity_potion": "Lingering Potion of Corruption Immunity",
+      "item.corruption.corrupted_enderman_spawn_egg": "Corrupted Enderman Spawn Egg",
+      "item.corruption.corrupt_spider_spawn_egg": "Corrupt Spider Spawn Egg",
+      "item.minecraft.splash_potion.effect.corruption_immunity_potion": "Splash Potion of Corruption Immunity",
+      "effect.corruption.corrupting": "Corrupting",
       "entity.corruption.corrupt_zombie": "Corrupt Zombie",
       "entity.corruption.corrupt_creeper": "Corrupt Creeper",
-      "block.corruption.corruption": "Corruption",
       "block.the_corruption.corruption": "Corruption",
       "item.minecraft.potion.effect.corruption_immunity_potion": "Potion of Corruption Immunity",
       "entity.corruption.corrupt_skeleton": "Corrupt Skeleton",
       "item.corruption.restore_shard": "Restore Shard",
-      "effect.corruption.corruptionimmunity": "Corruption immunity",
       "item.corruption.corrupt_creeper_spawn_egg": "Corrupt Creeper Spawn Egg",
-      "item.corruption.corrupt_zombie_spawn_egg": "Corrupt Zombie Spawn Egg",
       "advancements.its_called_healing.descr": "Obtain The Restore",
-      "block.corruption.corruption_old": "Corruption Old",
-      "item.minecraft.lingering_potion.effect.corruption_immunity_potion": "Lingering Potion of Corruption Immunity",
       "block.corruption.the_restore": "The Restore",
       "item.corruption.corrupt_skeleton_spawn_egg": "Corrupt Skeleton Spawn Egg",
-      "item.corruption.corrupt_spider_spawn_egg": "Corrupt Spider Spawn Egg",
-      "item.minecraft.splash_potion.effect.corruption_immunity_potion": "Splash Potion of Corruption Immunity",
       "entity.corruption.corrupt_spider": "Corrupt Spider",
       "advancements.corrupted.descr": "What is this, corruption; it seems to weaken me!",
       "item.minecraft.tipped_arrow.effect.corruption_immunity_potion": "Arrow of Corruption Immunity",
-      "advancements.its_called_healing.title": "Its Called Healing"
+      "advancements.its_called_healing.title": "Its Called Healing",
+      "item.corruption.corrupted_remains": "Corrupted Remains"
     }
   },
   "foldersRoot": {
@@ -561,5 +692,5 @@
     "modElementsPackage": "net.mcreator.thecorruption",
     "lockBaseModFiles": false
   },
-  "mcreatorVersion": 202300224119
+  "mcreatorVersion": 202300336712
 }

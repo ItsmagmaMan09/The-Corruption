@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "corruption:corruption",
+    "corruption:corruption_old",
+    "corruption:the_restore"
+  ]
+}

@@ -9,8 +9,10 @@ import net.mcreator.thecorruption.procedures.TheRestoreEntityWalksOnTheBlockProc
 import net.mcreator.thecorruption.procedures.TheRestoreBlockIsPlacedByProcedure;
 import net.mcreator.thecorruption.procedures.TestOnEffectActiveTickProcedure;
 import net.mcreator.thecorruption.procedures.StartpProcedure;
+import net.mcreator.thecorruption.procedures.CorruptionimmunityOnEffectActiveTickProcedure;
 import net.mcreator.thecorruption.procedures.CorruptionSpreadProcedure;
 import net.mcreator.thecorruption.procedures.CorruptionEntityWalksOnTheBlockProcedure;
+import net.mcreator.thecorruption.procedures.CorruptedRemainsPlayerFinishesUsingItemProcedure;
 import net.mcreator.thecorruption.procedures.CorruptMobPremCorruptImunProcedure;
 
 @SuppressWarnings("InstantiationOfUtilityClass")
@@ -24,5 +26,7 @@ public class CorruptionModProcedures {
 		new CorruptMobPremCorruptImunProcedure();
 		new TheRestoreBlockIsPlacedByProcedure();
 		new TheRestoreEntityWalksOnTheBlockProcedure();
+		new CorruptionimmunityOnEffectActiveTickProcedure();
+		new CorruptedRemainsPlayerFinishesUsingItemProcedure();
 	}
 }

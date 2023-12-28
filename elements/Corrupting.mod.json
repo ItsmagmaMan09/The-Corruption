@@ -1,5 +1,5 @@
 {
-  "_fv": 43,
+  "_fv": 47,
   "_type": "potioneffect",
   "definition": {
     "effectName": "Corrupting",
@@ -8,7 +8,7 @@
       "value": -16777216,
       "falpha": 0.0
     },
-    "isInstant": true,
+    "isInstant": false,
     "isBad": true,
     "isBenefitical": false,
     "renderStatusInInventory": true,

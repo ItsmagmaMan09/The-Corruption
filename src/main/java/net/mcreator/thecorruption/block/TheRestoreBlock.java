@@ -2,6 +2,7 @@
 package net.mcreator.thecorruption.block;
 
 import net.minecraft.world.level.storage.loot.LootParams;
+import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.SoundType;
@@ -29,7 +30,7 @@ import java.util.List;
 import java.util.Collections;
 
 public class TheRestoreBlock extends Block {
-	public static BlockBehaviour.Properties PROPERTIES = BlockBehaviour.Properties.of().sound(SoundType.SHROOMLIGHT).strength(1f, 10f);
+	public static BlockBehaviour.Properties PROPERTIES = BlockBehaviour.Properties.of().instrument(NoteBlockInstrument.BASEDRUM).sound(SoundType.SHROOMLIGHT).strength(1f, 10f);
 
 	public TheRestoreBlock() {
 		super(PROPERTIES);
@@ -60,20 +61,20 @@ public class TheRestoreBlock extends Block {
 		int x = pos.getX();
 		int y = pos.getY();
 		int z = pos.getZ();
-		TheRestoreUpdateTickProcedure.execute(com.google.common.collect.ImmutableMap.<String, Object>builder().put("world", world).put("x", x).put("y", y).put("z", z).build());
+		TheRestoreUpdateTickProcedure.execute(world, x, y, z);
 		world.scheduleTick(pos, this, 1);
 	}
 
 	@Override
 	public void stepOn(Level world, BlockPos pos, BlockState blockstate, Entity entity) {
 		super.stepOn(world, pos, blockstate, entity);
-		TheRestoreEntityWalksOnTheBlockProcedure.execute(com.google.common.collect.ImmutableMap.<String, Object>builder().put("entity", entity).build());
+		TheRestoreEntityWalksOnTheBlockProcedure.execute(entity);
 	}
 
 	@Override
 	public void setPlacedBy(Level world, BlockPos pos, BlockState blockstate, LivingEntity entity, ItemStack itemstack) {
 		super.setPlacedBy(world, pos, blockstate, entity, itemstack);
-		TheRestoreBlockIsPlacedByProcedure.execute(com.google.common.collect.ImmutableMap.<String, Object>builder().put("entity", entity).build());
+		TheRestoreBlockIsPlacedByProcedure.execute(entity);
 	}
 
 	@Environment(EnvType.CLIENT)
